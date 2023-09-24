@@ -1,6 +1,9 @@
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import AuthorisationForm from "./components/AuthorisationForm";
-import RegistrationForm from "./components/RegistrationForm";
+import RegistrationPage from "./pages/RegistrationPage";
+import AuthPage from "./pages/AuthPage";
+import PostsListPage from "./pages/PostsListPage";
+import AboutPage from "./pages/AboutPage";
 
 function App() {
   // TODO:
@@ -18,8 +21,13 @@ function App() {
   // Страница удаления блогов (админ-панель)
   return (
     <div className="App">
-      <AuthorisationForm />
-      <RegistrationForm />
+      <Routes>
+        <Route path="/main" element={<PostsListPage />} />
+        <Route path="/auth" element={<AuthPage />} />
+        <Route path="/registration" element={<RegistrationPage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/post" element={<PostPage />} />
+      </Routes>
     </div>
   );
 }
