@@ -4,6 +4,11 @@ import RegistrationPage from "./pages/RegistrationPage";
 import AuthPage from "./pages/AuthPage";
 import PostsListPage from "./pages/PostsListPage";
 import AboutPage from "./pages/AboutPage";
+import NavBar from "./components/NavBar";
+import PostPage from "./pages/PostPage";
+import ProfilePage from "./pages/ProfilePage";
+import { BrowserRouter } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   // TODO:
@@ -21,13 +26,18 @@ function App() {
   // Страница удаления блогов (админ-панель)
   return (
     <div className="App">
-      <Routes>
-        <Route path="/main" element={<PostsListPage />} />
-        <Route path="/auth" element={<AuthPage />} />
-        <Route path="/registration" element={<RegistrationPage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/post" element={<PostPage />} />
-      </Routes>
+      <NavBar />
+      <div>byaj</div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/main" element={<PostsListPage />} />
+          <Route path="/auth" element={<AuthPage />} />
+          <Route path="/registration" element={<RegistrationPage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/post" element={<PostPage />} />
+          <Route path="/profile" element={<ProfilePage />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
