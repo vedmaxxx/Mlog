@@ -24,18 +24,20 @@ function App() {
   // Страница авторизации/регистрации
   // Страница создания/редактирования  поста
   // Страница удаления блогов (админ-панель)
+  const loggedIn = false;
+
   return (
     <div className="App">
       <NavBar />
       <div>byaj</div>
       <BrowserRouter>
         <Routes>
-          <Route path="/main" element={<PostsListPage />} />
+          <Route path="/posts" element={<PostsListPage />} />
           <Route path="/auth" element={<AuthPage />} />
           <Route path="/registration" element={<RegistrationPage />} />
           <Route path="/about" element={<AboutPage />} />
-          <Route path="/post" element={<PostPage />} />
-          <Route path="/profile" element={<ProfilePage />} />
+          <Route path="/posts/:id" element={<PostPage />} />
+          {loggedIn && <Route path="/profile" element={<ProfilePage />} />}
         </Routes>
       </BrowserRouter>
     </div>
