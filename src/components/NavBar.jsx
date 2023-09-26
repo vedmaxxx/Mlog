@@ -1,8 +1,9 @@
 import React, { useContext } from "react";
 import { Button, Container, Nav, Navbar } from "react-bootstrap";
 import { Context } from "../index";
+import { observer } from "mobx-react-lite";
 
-const NavBar = () => {
+const NavBar = observer(() => {
   const { users } = useContext(Context);
 
   return (
@@ -26,12 +27,29 @@ const NavBar = () => {
             )}
           </Nav>
         </Container>
-        <Button variant="info" className="me-5">
-          {users.loggedIn ? "Выйти" : "Авторизоваться"}
-        </Button>
+        {users.loggedIn ? (
+          <Button
+            variant="info"
+            className="me-5"
+            onClick={() => {
+              users.setLoggedIn(false);
+            }}
+          >
+            Выйти
+          </Button>
+        ) : (
+          <Button
+            variant="info"
+            className="me-5"
+            onClick={() => {
+              users.setLoggedIn(true);
+            }}
+          >
+            Авторизоваться
+          </Button>
+        )}
       </Navbar>
     </div>
   );
-};
-
+});
 export default NavBar;
