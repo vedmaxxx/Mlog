@@ -1,6 +1,6 @@
 import { makeAutoObservable } from "mobx";
 
-class commentStore {
+class CommentStore {
   comments = [
     {
       postId: 1,
@@ -31,4 +31,4 @@ class commentStore {
   }
 }
 
-export default new commentStore();
+export default CommentStore;

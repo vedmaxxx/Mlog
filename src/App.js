@@ -9,11 +9,13 @@ import PostPage from "./pages/PostPage";
 import ProfilePage from "./pages/ProfilePage";
 import { BrowserRouter } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Context } from "./index";
+import { useContext } from "react";
 
 function App() {
   // TODO:
   // Сортировка постов по дате/лайкам/просмотрам
-  // Панель создания поста редактирования - как пользователь
+  // Панель создания поста / редактирования - как пользователь
   // Панель управления постами (удаление/редактирование) - как админ
   // Вывод комментариев под пост (могут оставлять обычные пользователи)
 
@@ -24,7 +26,7 @@ function App() {
   // Страница авторизации/регистрации
   // Страница создания/редактирования  поста
   // Страница удаления блогов (админ-панель)
-  const loggedIn = false;
+  const { users } = useContext(Context);
 
   return (
     <div className="App">
@@ -37,7 +39,9 @@ function App() {
           <Route path="/registration" element={<RegistrationPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/posts/:id" element={<PostPage />} />
-          {loggedIn && <Route path="/profile" element={<ProfilePage />} />}
+          {users.loggedIn && (
+            <Route path="/profile" element={<ProfilePage />} />
+          )}
         </Routes>
       </BrowserRouter>
     </div>

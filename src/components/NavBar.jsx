@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Button, Container, Nav, Navbar } from "react-bootstrap";
+import { Context } from "../index";
 
 const NavBar = () => {
-  const loggedIn = false;
+  const { users } = useContext(Context);
+
   return (
     <div>
       <Navbar bg="primary" data-bs-theme="dark">
@@ -17,13 +19,15 @@ const NavBar = () => {
             <Nav.Link href="#about" to="/about">
               О нас
             </Nav.Link>
-            <Nav.Link href="#profile" to="/profile">
-              Личный кабинет
-            </Nav.Link>
+            {users.loggedIn && (
+              <Nav.Link href="#profile" to="/profile">
+                Личный кабинет
+              </Nav.Link>
+            )}
           </Nav>
         </Container>
         <Button variant="info" className="me-5">
-          {loggedIn ? "Выйти" : "Авторизоваться"}
+          {users.loggedIn ? "Выйти" : "Авторизоваться"}
         </Button>
       </Navbar>
     </div>

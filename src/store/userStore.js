@@ -1,6 +1,6 @@
 import { makeAutoObservable } from "mobx";
 
-class userStore {
+class UserStore {
   // Текущий пользователь
   _user = {};
   // Авторизован ли пользователь
@@ -25,4 +25,4 @@ class userStore {
   }
 }
 
-export default new userStore();
+export default UserStore;

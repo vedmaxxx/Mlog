@@ -1,6 +1,6 @@
 import { makeAutoObservable } from "mobx";
 
-class postStore {
+class PostStore {
   posts = [
     {
       id: 1,
@@ -37,4 +37,4 @@ class postStore {
   }
 }
 
-export default new postStore();
+export default PostStore;
