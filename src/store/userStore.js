@@ -4,7 +4,7 @@ class UserStore {
   // Текущий пользователь
   _user = {};
   // Авторизован ли пользователь
-  _loggedIn = false;
+  _loggedIn = true;
 
   constructor() {
     makeAutoObservable(this);

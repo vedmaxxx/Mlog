@@ -2,9 +2,11 @@ import React, { useContext } from "react";
 import { Button, Container, Nav, Navbar } from "react-bootstrap";
 import { Context } from "../index";
 import { observer } from "mobx-react-lite";
+import { useNavigate } from "react-router-dom";
 
 const NavBar = observer(() => {
   const { users } = useContext(Context);
+  const navigate = useNavigate();
 
   return (
     <div>
@@ -42,7 +44,7 @@ const NavBar = observer(() => {
             variant="info"
             className="me-5"
             onClick={() => {
-              users.setLoggedIn(true);
+              navigate("/auth");
             }}
           >
             Авторизоваться

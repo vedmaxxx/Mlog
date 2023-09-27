@@ -2,15 +2,16 @@ import React, { useContext } from "react";
 import classes from "./AuthReg.module.css";
 import { Link, useNavigate } from "react-router-dom";
 import { Context } from "../index";
+import { observer } from "mobx-react-lite";
 
-const RegistrationForm = () => {
+const AuthForm = observer(() => {
   const { users } = useContext(Context);
   const navigate = useNavigate();
 
   return (
     <div className={classes.container}>
       <div className={classes.title}>
-        Регистрация
+        Вход
         <div className={classes.line}></div>
       </div>
       <form className={classes.form} action="">
@@ -21,17 +22,7 @@ const RegistrationForm = () => {
           <input
             className={classes.input}
             type="text"
-            placeholder="Введите имя"
-          />
-        </div>
-        <div className={classes.input_container}>
-          <label htmlFor="" className={classes.label}>
-            Логин
-          </label>
-          <input
-            className={classes.input}
-            type="text"
-            placeholder="Введите логин"
+            placeholder="Введите имя..."
           />
         </div>
         <div className={classes.input_container}>
@@ -40,19 +31,28 @@ const RegistrationForm = () => {
           </label>
           <input
             className={classes.input}
-            type="text"
-            placeholder="Введите пароль"
+            type="password"
+            placeholder="Введите пароль..."
           />
         </div>
         <div>
-          <Link className={classes.hint} to={"/auth"}>
-            Уже есть аккаунт
+          <Link className={classes.hint}>Забыли пароль</Link> /{" "}
+          <Link className={classes.hint} to={"/registration"}>
+            Не зарегистрированы
           </Link>
         </div>
-        <button className={classes.btn}>Зарегистрироваться</button>
+        <button
+          className={classes.btn}
+          onClick={() => {
+            users.setLoggedIn(true);
+            navigate("/posts");
+          }}
+        >
+          Войти
+        </button>
       </form>
     </div>
   );
-};
+});
 
-export default RegistrationForm;
+export default AuthForm;

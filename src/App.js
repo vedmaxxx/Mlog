@@ -30,9 +30,8 @@ function App() {
 
   return (
     <div className="App">
-      <NavBar />
-      <div>byaj</div>
       <BrowserRouter>
+        <NavBar />
         <Routes>
           <Route path="/posts" element={<PostsListPage />} />
           <Route path="/auth" element={<AuthPage />} />

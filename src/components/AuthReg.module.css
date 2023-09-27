@@ -57,7 +57,7 @@
   font-size: 14px;
   color: #9c9c9c;
 }
-.hint span:hover {
+.hint:hover {
   color: #2670ff;
   text-decoration: underline;
 }
