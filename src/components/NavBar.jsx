@@ -2,7 +2,8 @@ import React, { useContext } from "react";
 import { Button, Container, Nav, Navbar } from "react-bootstrap";
 import { Context } from "../index";
 import { observer } from "mobx-react-lite";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import classes from "./NavBar.module.css";
 
 const NavBar = observer(() => {
   const { users } = useContext(Context);
@@ -16,16 +17,16 @@ const NavBar = observer(() => {
             LOGO
           </Navbar.Brand>
           <Nav className="me-auto ms-3">
-            <Nav.Link href="#main" to="/main">
+            <Link className={classes.nav_link} to="/main">
               Главная
-            </Nav.Link>
-            <Nav.Link href="#about" to="/about">
+            </Link>
+            <Link className={classes.nav_link} to="/about">
               О нас
-            </Nav.Link>
+            </Link>
             {users.loggedIn && (
-              <Nav.Link href="#profile" to="/profile">
+              <Link className={classes.nav_link} to="/profile">
                 Личный кабинет
-              </Nav.Link>
+              </Link>
             )}
           </Nav>
         </Container>

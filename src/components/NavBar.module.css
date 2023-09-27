@@ -1,0 +1,11 @@
+.nav_link {
+  text-decoration: none;
+  color: #fff;
+  margin: 0 10px;
+  transition: 0.1s;
+}
+
+.nav_link:hover {
+  opacity: 0.7;
+  transition: 0.1s;
+}

@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import "./App.css";
 import RegistrationPage from "./pages/RegistrationPage";
 import AuthPage from "./pages/AuthPage";
@@ -33,6 +33,7 @@ function App() {
       <BrowserRouter>
         <NavBar />
         <Routes>
+          <Route path="*" element={<Navigate to="/posts" replace />} />
           <Route path="/posts" element={<PostsListPage />} />
           <Route path="/auth" element={<AuthPage />} />
           <Route path="/registration" element={<RegistrationPage />} />

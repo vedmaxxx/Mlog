@@ -49,7 +49,15 @@ const RegistrationForm = () => {
             Уже есть аккаунт
           </Link>
         </div>
-        <button className={classes.btn}>Зарегистрироваться</button>
+        <button
+          className={classes.btn}
+          onClick={() => {
+            users.setLoggedIn(true);
+            navigate("/posts");
+          }}
+        >
+          Зарегистрироваться
+        </button>
       </form>
     </div>
   );
