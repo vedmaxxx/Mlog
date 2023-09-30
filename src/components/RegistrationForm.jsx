@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import classes from "./AuthReg.module.css";
-import { Link, useNavigate } from "react-router-dom";
+import { Form, Link, useNavigate } from "react-router-dom";
 import { Context } from "../index";
 
 const RegistrationForm = () => {
@@ -49,6 +49,7 @@ const RegistrationForm = () => {
             Уже есть аккаунт
           </Link>
         </div>
+        {/* <Form.Control type="file" /> */}
         <button
           className={classes.btn}
           onClick={() => {

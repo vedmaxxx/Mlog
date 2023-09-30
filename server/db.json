@@ -78,7 +78,7 @@
       "userId": 1,
       "title": "Which programming language is the best?",
       "body": "some text",
-      "watches": 30,
+      "views": 30,
       "likes": 10,
       "date": "2023-09-10",
       "image": ""
@@ -88,7 +88,7 @@
       "userId": 2,
       "title": "C++ basics",
       "body": "some text",
-      "watches": 14,
+      "views": 14,
       "likes": 4,
       "date": "2023-09-11",
       "image": ""
