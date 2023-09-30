@@ -2,10 +2,28 @@
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  /* justify-content: space-between; */
 }
 .post_list > * {
   margin: 15px;
 }
 
-/* Элементы не будут сжиматься */
+.create_btn {
+  padding: 7px 15px;
+  background-color: #2670ff;
+  color: white;
+  border: 1px solid #c2c2c2;
+  border-radius: 25px;
+  font-size: 20px;
+  position: fixed;
+  top: 88%;
+  left: 80%;
+  transition: 0.2s;
+}
+
+.create_btn:hover {
+  color: #2670ff;
+  background-color: white;
+  border: 1px solid #c2c2c2;
+  box-shadow: 0 0 2px #c2c2c2;
+  transition: 0.2s;
+}

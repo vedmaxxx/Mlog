@@ -4,6 +4,7 @@ import { Context } from "../index";
 import { observer } from "mobx-react-lite";
 import { Link, useNavigate } from "react-router-dom";
 import classes from "./NavBar.module.css";
+import { HandySvg } from "handy-svg";
 
 const NavBar = observer(() => {
   const { users } = useContext(Context);
@@ -14,6 +15,7 @@ const NavBar = observer(() => {
       <Navbar bg="primary" data-bs-theme="dark">
         <Container>
           <Navbar.Brand href="#home" className="ms-5">
+            {/* <HandySvg src="" /> */}
             LOGO
           </Navbar.Brand>
           <Nav className="me-auto ms-3">

@@ -5,7 +5,20 @@
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
+  position: relative;
 }
+.delete_btn {
+  font-size: 16px;
+  font-weight: 300;
+  color: white;
+  border: none;
+  padding: 8px;
+
+  background-color: red;
+  position: absolute;
+  /* left: calc(100% - 280px); */
+}
+
 .navlink {
   text-decoration: none;
 }
@@ -25,9 +38,9 @@
   min-height: 200px;
   max-height: 200px;
   display: flex;
+  object-fit: cover;
 }
 .info_container_small {
-  /* height: 240px; */
   padding: 0px 20px;
   display: flex;
   flex-grow: 1;
@@ -52,7 +65,6 @@
   transition: 0.2s;
 }
 .title:hover {
-  /* text-decoration: underline; */
   color: rgb(50, 39, 255);
   transition: 0.2s;
 }
