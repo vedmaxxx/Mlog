@@ -1,0 +1,11 @@
+.post_list {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-between; */
+}
+.post_list > * {
+  margin: 15px;
+}
+
+/* Элементы не будут сжиматься */

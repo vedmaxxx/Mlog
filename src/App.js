@@ -2,7 +2,7 @@ import { Navigate, Route, Routes } from "react-router-dom";
 import "./App.css";
 import RegistrationPage from "./pages/RegistrationPage";
 import AuthPage from "./pages/AuthPage";
-import PostsListPage from "./pages/PostsListPage";
+import PostListPage from "./pages/PostListPage";
 import AboutPage from "./pages/AboutPage";
 import NavBar from "./components/NavBar";
 import PostPage from "./pages/PostPage";
@@ -11,6 +11,7 @@ import { BrowserRouter } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Context } from "./index";
 import { useContext } from "react";
+import { Container } from "react-bootstrap";
 
 function App() {
   // TODO:
@@ -38,17 +39,19 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <NavBar />
-        <Routes>
-          <Route path="*" element={<Navigate to="/posts" replace />} />
-          <Route path="/posts" element={<PostsListPage />} />
-          <Route path="/auth" element={<AuthPage />} />
-          <Route path="/registration" element={<RegistrationPage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/posts/:id" element={<PostPage />} />
-          {users.loggedIn && (
-            <Route path="/profile" element={<ProfilePage />} />
-          )}
-        </Routes>
+        <Container>
+          <Routes>
+            <Route path="*" element={<Navigate to="/posts" replace />} />
+            <Route path="/posts" element={<PostListPage />} />
+            <Route path="/auth" element={<AuthPage />} />
+            <Route path="/registration" element={<RegistrationPage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/posts/:id" element={<PostPage />} />
+            {users.loggedIn && (
+              <Route path="/profile" element={<ProfilePage />} />
+            )}
+          </Routes>
+        </Container>
       </BrowserRouter>
     </div>
   );

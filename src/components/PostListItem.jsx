@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faHeart } from "@fortawesome/free-regular-svg-icons";
 import { Link, NavLink } from "react-router-dom";
 
-const PostSmall = () => {
+const PostListItem = () => {
   return (
     <div className={classes.post_small}>
       <NavLink>
@@ -17,7 +17,7 @@ const PostSmall = () => {
 
       <div className={classes.info_container_small}>
         <div className={classes.header}>
-          <div className={classes.category}>text</div>
+          <div className={classes.category}>лонгрид</div>
           <Link to="/" className={classes.title}>
             Очень длинный заголовок
           </Link>
@@ -41,4 +41,4 @@ const PostSmall = () => {
   );
 };
 
-export default PostSmall;
+export default PostListItem;
