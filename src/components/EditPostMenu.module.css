@@ -1,0 +1,29 @@
+.container {
+  margin: 40px 0 0 0;
+  max-width: 850px;
+}
+
+.title {
+  font-size: 30px;
+  font-weight: 700;
+  margin: 15px 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 90%;
+  grid-template-rows: 100px 100px;
+  /* grid-column-gap: 20px; */
+  /* grid-row-gap: 50px; */
+  /* grid-gap: 50px 20px; */
+  grid-gap: 20px;
+}
+
+.grid > * {
+  border: 1px solid red;
+}
+
+.input {
+  width: 100%;
+  padding: 5px;
+}
