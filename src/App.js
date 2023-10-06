@@ -12,6 +12,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Context } from "./index";
 import { useContext } from "react";
 import { Container } from "react-bootstrap";
+import EditPostPage from "./pages/EditPostPage";
 
 function App() {
   // TODO:
@@ -49,6 +50,9 @@ function App() {
             <Route path="/posts/:id" element={<PostPage />} />
             {users.loggedIn && (
               <Route path="/profile" element={<ProfilePage />} />
+            )}
+            {users.loggedIn && (
+              <Route path="/edit" element={<EditPostPage />} />
             )}
           </Routes>
         </Container>
