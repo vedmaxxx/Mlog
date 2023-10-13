@@ -3,12 +3,14 @@ import { Container, Form } from "react-bootstrap";
 import { Editor } from "@tinymce/tinymce-react";
 import classes from "./EditPostMenu.module.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { useNavigate } from "react-router-dom";
 
 const EditPostMenu = () => {
   const [body, setBody] = useState("");
   const [title, setTitle] = useState("");
   const [announcement, setAnnouncement] = useState("");
   const [image, setImage] = useState();
+  const navigate = useNavigate();
 
   // Отслеживание изменения значения поля редактора и сохранение его в body
   const handleEditorChange = (e) => {
@@ -22,6 +24,8 @@ const EditPostMenu = () => {
     console.log("Анонс: " + announcement);
     console.log("Картинка: " + image);
     console.log("Текст: " + body);
+
+    navigate("/posts");
   };
 
   return (
