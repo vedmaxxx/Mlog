@@ -4,7 +4,7 @@ import PostListItem from "./PostListItem";
 import { Context } from "../index";
 import { observer } from "mobx-react-lite";
 import { useNavigate } from "react-router-dom";
-1;
+
 const PostList = observer(() => {
   const { posts } = useContext(Context);
   const navigate = useNavigate();
