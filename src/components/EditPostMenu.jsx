@@ -13,8 +13,6 @@ const EditPostMenu = () => {
   // Отслеживание изменения значения поля редактора и сохранение его в body
   const handleEditorChange = (e) => {
     setBody(e.target.getContent());
-
-    console.log(body);
   };
 
   // Отправка поста
