@@ -1,11 +1,12 @@
 import React from "react";
 import PostList from "../components/PostList";
+import { Container } from "react-bootstrap";
 
 const PostListPage = () => {
   return (
-    <div>
+    <Container>
       <PostList />
-    </div>
+    </Container>
   );
 };
 

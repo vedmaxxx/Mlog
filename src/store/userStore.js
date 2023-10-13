@@ -34,7 +34,7 @@ class UserStore {
     },
     {
       id: 4,
-      role: "user",
+      role: "editor",
       email: "eve.holt@reqres.in",
       username: "eve",
       password: "qwerty4",
@@ -44,7 +44,7 @@ class UserStore {
     },
     {
       id: 5,
-      role: "user",
+      role: "editor",
       email: "charles.morris@reqres.in",
       username: "charles",
       password: "qwerty5",

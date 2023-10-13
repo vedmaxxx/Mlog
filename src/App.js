@@ -40,22 +40,20 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <NavBar />
-        <Container>
-          <Routes>
-            <Route path="*" element={<Navigate to="/posts" replace />} />
-            <Route path="/posts" element={<PostListPage />} />
-            <Route path="/auth" element={<AuthPage />} />
-            <Route path="/registration" element={<RegistrationPage />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/posts/:id" element={<PostPage />} />
-            {users.loggedIn && (
-              <Route path="/profile" element={<ProfilePage />} />
-            )}
-            {users.loggedIn && (
-              <Route path="/edit" element={<EditPostPage />} />
-            )}
-          </Routes>
-        </Container>
+        {/* <Container> */}
+        <Routes>
+          <Route path="*" element={<Navigate to="/posts" replace />} />
+          <Route path="/posts" element={<PostListPage />} />
+          <Route path="/posts/:id" element={<PostPage />} />
+          <Route path="/auth" element={<AuthPage />} />
+          <Route path="/registration" element={<RegistrationPage />} />
+          <Route path="/about" element={<AboutPage />} />
+          {users.loggedIn && (
+            <Route path="/profile" element={<ProfilePage />} />
+          )}
+          {users.loggedIn && <Route path="/edit" element={<EditPostPage />} />}
+        </Routes>
+        {/* </Container> */}
       </BrowserRouter>
     </div>
   );
