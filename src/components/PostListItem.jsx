@@ -1,5 +1,5 @@
 import React from "react";
-import classes from "./Post.module.css";
+import classes from "./PostListItem.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faHeart } from "@fortawesome/free-regular-svg-icons";
 import { Link, NavLink } from "react-router-dom";

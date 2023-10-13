@@ -4,6 +4,7 @@ import PostListItem from "./PostListItem";
 import { Context } from "../index";
 import { observer } from "mobx-react-lite";
 import { useNavigate } from "react-router-dom";
+import Post from "./Post";
 
 const PostList = observer(() => {
   const { posts } = useContext(Context);
@@ -32,6 +33,8 @@ const PostList = observer(() => {
       <button className={classes.create_btn} onClick={() => navigate("/edit")}>
         Написать пост...
       </button>
+
+      <Post />
     </div>
   );
 });

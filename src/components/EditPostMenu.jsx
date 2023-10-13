@@ -1,20 +1,22 @@
 import React, { useState } from "react";
 import { Container, Form } from "react-bootstrap";
+import { Editor } from "@tinymce/tinymce-react";
 import classes from "./EditPostMenu.module.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Editor } from "@tinymce/tinymce-react";
 
 const EditPostMenu = () => {
-  let body = "";
-  const [title, setTitle] = useState();
-  const [announcement, setAnnouncement] = useState();
+  const [body, setBody] = useState("");
+  const [title, setTitle] = useState("");
+  const [announcement, setAnnouncement] = useState("");
   const [image, setImage] = useState();
 
   // Отслеживание изменения значения поля редактора и сохранение его в body
   const handleEditorChange = (e) => {
-    e.preventDefault();
-    body = e.target.getContent();
+    setBody(e.target.getContent());
+
+    console.log(body);
   };
+
   // Отправка поста
   const handlePostClick = (e) => {
     e.preventDefault();
@@ -59,6 +61,7 @@ const EditPostMenu = () => {
             </Form.Group>
           </div>
           <div></div>
+
           <div>
             <Editor
               content="<p>This is the initial content of the editor</p>"

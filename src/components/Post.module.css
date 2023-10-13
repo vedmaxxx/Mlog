@@ -1,82 +1,75 @@
-.post_small {
-  width: 280px;
-  height: 440px;
-  box-shadow: 0 0 1px #c2c2c2;
-  display: flex;
-  flex-direction: column;
-  flex-shrink: 0;
-  position: relative;
-}
-.delete_btn {
-  font-size: 16px;
-  font-weight: 300;
-  color: white;
-  border: none;
-  padding: 8px;
-
-  background-color: red;
-  position: absolute;
-}
-
-.navlink {
-  text-decoration: none;
+.container {
+  box-shadow: 0 0 2px #c2c2c2;
+  padding: 50px;
+  width: 1100px;
 }
 
 .header {
-  margin: 15px 0 0 0;
-}
-.footer {
   display: flex;
-  margin: 20px 0 20px 0;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.image_small {
-  width: 100%;
-  min-height: 200px;
-  max-height: 200px;
-  display: flex;
-  object-fit: cover;
-}
-.info_container_small {
-  padding: 0px 20px;
-  display: flex;
-  flex-grow: 1;
-
-  flex-direction: column;
-  justify-content: space-between;
-}
-.category {
-  margin: 0 0 8px 0;
-  color: rgb(50, 39, 255);
-  font-size: 14px;
-  text-transform: uppercase;
+  align-items: baseline;
+  margin: 0 0 15px 0;
 }
 
 .title {
   font-weight: 700;
-  font-size: 22px;
+  font-size: 32px;
   line-height: 26px;
   margin: 0 0 15px 0;
   text-decoration: none;
   color: black;
   transition: 0.2s;
-}
-.title:hover {
-  color: rgb(50, 39, 255);
-  transition: 0.2s;
+  margin: 0 0 50px 0;
 }
 
 .rating {
+  /* width: 60%; */
   display: flex;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 300;
+  justify-content: flex-end;
 }
 .date {
   font-size: 12px;
+  margin: 0 20px 0 0;
 }
 
 .icon_box {
   margin: 0 10px 0 0;
+}
+
+.category {
+  margin: 0 0 8px 0;
+  color: rgb(50, 39, 255);
+  font-size: 14px;
+
+  text-transform: uppercase;
+}
+
+.image_container {
+  margin: 0 0 30px 0;
+}
+.image {
+  width: 60%;
+  min-height: 100px;
+  max-height: 400px;
+  display: flex;
+  object-fit: cover;
+}
+.announcement {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0 0 30px 0;
+}
+
+.footer {
+  width: 40%;
+  background-color: #f7f7f7;
+  padding: 20px;
+}
+
+.avatar_container {
+  border-radius: 50%;
+  background-color: #000;
+  width: 50px;
+  height: 50px;
 }
