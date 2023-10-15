@@ -69,9 +69,28 @@
       "last_name": "Morris",
       "avatar": "https://reqres.in/img/faces/5-image.jpg",
       "id": 7
+    },
+    {
+      "id": 1697367682821,
+      "role": "user",
+      "first_name": "иван",
+      "last_name": "Иванов",
+      "email": "alextext04@mail.ru",
+      "username": "alexxx",
+      "password": "123",
+      "avatar": "/uploads/1697367682325-1 Ð²Ð°ÑÐ¸Ð°Ð½Ñ.png"
+    },
+    {
+      "id": 1697367849134,
+      "role": "user",
+      "first_name": "Сергей",
+      "last_name": "Фоменко",
+      "email": "kilkoo@mail.ru",
+      "username": "sergo",
+      "password": "rtyyqe",
+      "avatar": "/uploads/1697367848756-1-image.jpg"
     }
   ],
-
   "posts": [
     {
       "id": 1,
@@ -79,10 +98,11 @@
       "title": "Which programming language is the best?",
       "body": "some text",
       "announcement": "Текст посвщен",
+      "category": "longread",
       "views": 30,
       "likes": 10,
       "date": "2023-09-10",
-      "image": "https://image.mel.fm/i/i/iCp9WAF4mZ/590.jpg"
+      "image": "/uploads/590.jpg"
     },
     {
       "id": 2,
@@ -90,10 +110,35 @@
       "title": "C++ basics",
       "body": "some text",
       "announcement": "Текст посвщен",
+      "category": "short",
       "views": 14,
       "likes": 4,
       "date": "2023-09-11",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png"
+      "image": "/uploads/JavaScript-logo.png"
+    },
+    {
+      "id": 3,
+      "userId": 5,
+      "title": "Крокодилы ходят лёжа?",
+      "body": "some text",
+      "announcement": "Древняя тайна, о которой молчат",
+      "category": "short",
+      "views": 1352,
+      "likes": 266,
+      "date": "2023-09-11",
+      "image": "/uploads/13.jpg"
+    },
+    {
+      "id": 4,
+      "userId": 5,
+      "title": "О чем молчат программисты",
+      "body": "some text",
+      "announcement": "Древняя тайна, о которой молчат",
+      "category": "short",
+      "views": 1352,
+      "likes": 266,
+      "date": "2023-09-11",
+      "image": "/uploads/13.jpg"
     }
   ],
   "comments": [

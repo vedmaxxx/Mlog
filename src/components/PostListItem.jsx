@@ -2,13 +2,12 @@ import React from "react";
 import classes from "./PostListItem.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faHeart } from "@fortawesome/free-regular-svg-icons";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 
 const PostListItem = ({
   id,
   title,
   image,
-  // body,
   announcement,
   category,
   views,
@@ -16,19 +15,21 @@ const PostListItem = ({
   date,
   onDelete,
 }) => {
+  const navigate = useNavigate();
+
   return (
     <div className={classes.post_small}>
-      <NavLink>
+      <NavLink to={`/posts/${id}`}>
         <img
           className={classes.image_small + " " + classes.navlink}
-          src={image}
+          src={process.env.REACT_APP_BASE_URL + image}
           alt="а где фото..."
         />
       </NavLink>
       <div className={classes.info_container_small}>
         <div className={classes.header}>
           <div className={classes.category}>{category}</div>
-          <Link to="/" className={classes.title}>
+          <Link to={`/posts/${id}`} className={classes.title}>
             {title}
           </Link>
           <div>{announcement}</div>
@@ -54,6 +55,15 @@ const PostListItem = ({
         }}
       >
         Удалить
+      </button>
+      <button
+        className={classes.edit_btn + " start-0"}
+        onClick={() => {
+          console.log(`Нажали на редактировать`);
+          navigate(`/edit/${id}`);
+        }}
+      >
+        Редактировать
       </button>
     </div>
   );

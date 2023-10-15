@@ -81,3 +81,7 @@
   border: 2px solid #2670ff;
   transition: 0.3s;
 }
+
+.file_input {
+  width: fit-content;
+}

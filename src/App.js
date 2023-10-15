@@ -11,7 +11,6 @@ import { BrowserRouter } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Context } from "./index";
 import { useContext } from "react";
-import { Container } from "react-bootstrap";
 import EditPostPage from "./pages/EditPostPage";
 
 function App() {
@@ -35,12 +34,12 @@ function App() {
   // - маленькие: вывод списком, по 6 в ряд
   // - большие: типа лента новостей
   const { users } = useContext(Context);
+  console.log("Путь к серверу: ", process.env.REACT_APP_BASE_URL);
 
   return (
     <div className="App">
       <BrowserRouter>
         <NavBar />
-        {/* <Container> */}
         <Routes>
           <Route path="*" element={<Navigate to="/posts" replace />} />
           <Route path="/posts" element={<PostListPage />} />
@@ -51,9 +50,11 @@ function App() {
           {users.loggedIn && (
             <Route path="/profile" element={<ProfilePage />} />
           )}
+          {users.loggedIn && (
+            <Route path="/edit/:id" element={<EditPostPage />} />
+          )}
           {users.loggedIn && <Route path="/edit" element={<EditPostPage />} />}
         </Routes>
-        {/* </Container> */}
       </BrowserRouter>
     </div>
   );

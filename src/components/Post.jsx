@@ -4,9 +4,11 @@ import classes from "./Post.module.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faHeart } from "@fortawesome/free-regular-svg-icons";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 const Post = () => {
+  const params = useParams();
+
   return (
     <Container className="w-75">
       <div className={classes.container}>

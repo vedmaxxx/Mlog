@@ -17,6 +17,23 @@
   background-color: red;
   position: absolute;
 }
+.delete_btn:hover {
+  background-color: rgb(255, 109, 109);
+}
+
+.edit_btn {
+  font-size: 16px;
+  font-weight: 300;
+  color: white;
+  border: none;
+  padding: 8px;
+
+  background-color: rgb(60, 0, 255);
+  position: absolute;
+}
+.edit_btn:hover {
+  background-color: rgb(95, 98, 255);
+}
 
 .navlink {
   text-decoration: none;
