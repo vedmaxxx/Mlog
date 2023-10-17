@@ -12,4 +12,15 @@ export const createPost = async (post) => {
 
 export const deletePost = async (post_id) => {
   const res = await loggedInClient.delete(`/posts/${post_id}`);
+  return res;
+};
+
+export const updatePost = async (post_id, post) => {
+  const res = await loggedInClient.put(`/posts/${post_id}`, post);
+  return res;
+};
+
+export const getPost = async (post_id) => {
+  const res = await loggedInClient.get(`/posts/${post_id}`);
+  return res;
 };

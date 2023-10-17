@@ -13,3 +13,9 @@ export const register = async (user) => {
 
   return res;
 };
+
+export const getUsers = async () => {
+  const res = await client.get("/users");
+  console.log("getusers: ", res);
+  return res;
+};

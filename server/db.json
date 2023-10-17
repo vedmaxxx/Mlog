@@ -89,76 +89,64 @@
       "username": "sergo",
       "password": "rtyyqe",
       "avatar": "/uploads/1697367848756-1-image.jpg"
+    },
+    {
+      "id": 1697527674055,
+      "role": "user",
+      "first_name": "иван",
+      "last_name": "Иванов",
+      "email": "alextext04@mail.ru",
+      "username": "alexxx",
+      "password": "123445555",
+      "avatar": "/uploads/1697527673879-5-image.jpg"
     }
   ],
   "posts": [
     {
-      "id": 1,
-      "userId": 1,
-      "title": "Which programming language is the best?",
-      "body": "some text",
-      "announcement": "Текст посвщен",
-      "category": "longread",
-      "views": 30,
-      "likes": 10,
-      "date": "2023-09-10",
-      "image": "/uploads/590.jpg"
-    },
-    {
-      "id": 2,
-      "userId": 2,
-      "title": "C++ basics",
-      "body": "some text",
-      "announcement": "Текст посвщен",
-      "category": "short",
-      "views": 14,
-      "likes": 4,
-      "date": "2023-09-11",
-      "image": "/uploads/JavaScript-logo.png"
-    },
-    {
-      "id": 3,
-      "userId": 5,
-      "title": "Крокодилы ходят лёжа?",
-      "body": "some text",
-      "announcement": "Древняя тайна, о которой молчат",
-      "category": "short",
-      "views": 1352,
-      "likes": 266,
-      "date": "2023-09-11",
-      "image": "/uploads/13.jpg"
-    },
-    {
       "id": 4,
       "userId": 5,
       "title": "О чем молчат программисты",
-      "body": "some text",
+      "body": "<p><strong>Текст</strong>&nbsp;(от&nbsp;<a title=\"Латинский язык\" href=\"https://ru.wikipedia.org/wiki/%D0%9B%D0%B0%D1%82%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D1%8F%D0%B7%D1%8B%D0%BA\">лат.</a>&nbsp;<span lang=\"la\">textus</span>&nbsp;&mdash; ткань; сплетение, сочетание)&nbsp;&mdash; зафиксированная на каком-либо материальном носителе человеческая мысль; в общем плане связная и полная последовательность символов.</p>\n<p>Существуют две основные трактовки понятия &laquo;текст&raquo;:&nbsp;<em>имманентная</em>&nbsp;(расширенная, философски нагруженная) и&nbsp;<em>репрезентативная</em>&nbsp;(более частная).&nbsp;<a title=\"Имманентность\" href=\"https://ru.wikipedia.org/wiki/%D0%98%D0%BC%D0%BC%D0%B0%D0%BD%D0%B5%D0%BD%D1%82%D0%BD%D0%BE%D1%81%D1%82%D1%8C\">Имманентный</a>&nbsp;подход подразумевает отношение к тексту как к автономной реальности, нацеленность на выявление его внутренней структуры.&nbsp;<a title=\"Репрезентация\" href=\"https://ru.wikipedia.org/wiki/%D0%A0%D0%B5%D0%BF%D1%80%D0%B5%D0%B7%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D1%8F\">Репрезентативный</a>&nbsp;&mdash; рассмотрение текста как особой формы представления информации о внешней тексту действительности.</p>\n<p>В&nbsp;<a title=\"Лингвистика\" href=\"https://ru.wikipedia.org/wiki/%D0%9B%D0%B8%D0%BD%D0%B3%D0%B2%D0%B8%D1%81%D1%82%D0%B8%D0%BA%D0%B0\">лингвистике</a>&nbsp;термин &laquo;текст&raquo; используется в широком значении, включая и образцы&nbsp;<a title=\"Устная речь\" href=\"https://ru.wikipedia.org/wiki/%D0%A3%D1%81%D1%82%D0%BD%D0%B0%D1%8F_%D1%80%D0%B5%D1%87%D1%8C\">устной речи</a>.&nbsp;<a title=\"Восприятие\" href=\"https://ru.wikipedia.org/wiki/%D0%92%D0%BE%D1%81%D0%BF%D1%80%D0%B8%D1%8F%D1%82%D0%B8%D0%B5\">Восприятие</a>&nbsp;текста изучается в рамках&nbsp;<a class=\"new\" title=\"Лингвистика текста (страница отсутствует)\" href=\"https://ru.wikipedia.org/w/index.php?title=%D0%9B%D0%B8%D0%BD%D0%B3%D0%B2%D0%B8%D1%81%D1%82%D0%B8%D0%BA%D0%B0_%D1%82%D0%B5%D0%BA%D1%81%D1%82%D0%B0&amp;action=edit&amp;redlink=1\">лингвистики текста</a>&nbsp;и&nbsp;<a title=\"Психолингвистика\" href=\"https://ru.wikipedia.org/wiki/%D0%9F%D1%81%D0%B8%D1%85%D0%BE%D0%BB%D0%B8%D0%BD%D0%B3%D0%B2%D0%B8%D1%81%D1%82%D0%B8%D0%BA%D0%B0\">психолингвистики</a>. Так, например, И.&nbsp;Р.&nbsp;Гальперин определяет текст следующим образом: &laquo;Это письменное сообщение, объективированное в виде письменного документа, состоящее из ряда высказываний, объединённых разными типами лексической, грамматической и логической связи, имеющее определённый модальный характер, прагматическую установку и соответственно литературно обработанное&raquo;<sup id=\"cite_ref-1\" class=\"reference\"><a href=\"https://ru.wikipedia.org/wiki/%D0%A2%D0%B5%D0%BA%D1%81%D1%82#cite_note-1\">[1]</a></sup>.</p>\n<h3><span id=\"Членимость\" class=\"mw-headline\">Членимость</span><span class=\"mw-editsection\"><span class=\"mw-editsection-bracket\">[</span><a class=\"mw-editsection-visualeditor\" title=\"Редактировать раздел &laquo;Членимость&raquo;\" href=\"https://ru.wikipedia.org/w/index.php?title=%D0%A2%D0%B5%D0%BA%D1%81%D1%82&amp;veaction=edit&amp;section=2\">править</a><span class=\"mw-editsection-divider\">&nbsp;|&nbsp;</span><a title=\"Редактировать код раздела &laquo;Членимость&raquo;\" href=\"https://ru.wikipedia.org/w/index.php?title=%D0%A2%D0%B5%D0%BA%D1%81%D1%82&amp;action=edit&amp;section=2\">править код</a><span class=\"mw-editsection-bracket\">]</span></span></h3>\n<table class=\"plainlinks metadata ambox ambox-style\" role=\"presentation\">\n<tbody>\n<tr>\n<td class=\"mbox-image\">\n<div><a class=\"mw-file-description\" title=\"Переписать\" href=\"https://commons.wikimedia.org/wiki/File:Wiki_letter_w.svg?uselang=ru\"><img class=\"mw-file-element\" src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Wiki_letter_w.svg/40px-Wiki_letter_w.svg.png\" srcset=\"//upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Wiki_letter_w.svg/60px-Wiki_letter_w.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Wiki_letter_w.svg/80px-Wiki_letter_w.svg.png 2x\" alt=\"Переписать\" width=\"40\" height=\"40\" data-file-width=\"44\" data-file-height=\"44\"></a></div>\n</td>\n<td class=\"mbox-text\">\n<div class=\"mbox-text-div\"><strong>Этот раздел должен быть полностью переписан.</strong></div>\n<div class=\"mbox-textsmall-div hide-when-compact\">На&nbsp;<a title=\"Обсуждение:Текст\" href=\"https://ru.wikipedia.org/wiki/%D0%9E%D0%B1%D1%81%D1%83%D0%B6%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5:%D0%A2%D0%B5%D0%BA%D1%81%D1%82\">странице обсуждения</a>&nbsp;могут быть пояснения.</div>\n</td>\n</tr>\n</tbody>\n</table>\n<p>Текст, в своем роде, состоит&nbsp;<em>из некоторого количества&nbsp;<a title=\"Предложение (лингвистика)\" href=\"https://ru.wikipedia.org/wiki/%D0%9F%D1%80%D0%B5%D0%B4%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5_(%D0%BB%D0%B8%D0%BD%D0%B3%D0%B2%D0%B8%D1%81%D1%82%D0%B8%D0%BA%D0%B0)\">предложений</a></em>. Одно предложение, даже очень распространённое, сложное, текстом назвать нельзя, поскольку текст можно разделить на самостоятельные предложения, а части предложения сочетаются по законам&nbsp;<a title=\"Синтаксис\" href=\"https://ru.wikipedia.org/wiki/%D0%A1%D0%B8%D0%BD%D1%82%D0%B0%D0%BA%D1%81%D0%B8%D1%81\">синтаксиса</a>&nbsp;сложного предложения, но не текста.</p>\n<p><em>Главный тезис</em>&nbsp;&mdash; текст состоит из двух или более предложений.</p>\n<h3><span id=\".D0.A1.D0.BC.D1.8B.D1.81.D0.BB.D0.BE.D0.B2.D0.B0.D1.8F_.D1.86.D0.B5.D0.BB.D1.8C.D0.BD.D0.BE.D1.81.D1.82.D1.8C_.D1.82.D0.B5.D0.BA.D1.81.D1.82.D0.B0\"></span><span id=\"Смысловая_цельность_текста\" class=\"mw-headline\">Смысловая цельность текста</span><span class=\"mw-editsection\"><span class=\"mw-editsection-bracket\">[</span><a class=\"mw-editsection-visualeditor\" title=\"Редактировать раздел &laquo;Смысловая цельность текста&raquo;\" href=\"https://ru.wikipedia.org/w/index.php?title=%D0%A2%D0%B5%D0%BA%D1%81%D1%82&amp;veaction=edit&amp;section=3\">править</a><span class=\"mw-editsection-divider\">&nbsp;|&nbsp;</span><a title=\"Редактировать код раздела &laquo;Смысловая цельность текста&raquo;\" href=\"https://ru.wikipedia.org/w/index.php?title=%D0%A2%D0%B5%D0%BA%D1%81%D1%82&amp;action=edit&amp;section=3\">править код</a><span class=\"mw-editsection-bracket\">]</span></span></h3>\n<div class=\"hatnote navigation-not-searchable\">Основные статьи:&nbsp;<strong><a title=\"Когерентность (лингвистика)\" href=\"https://ru.wikipedia.org/wiki/%D0%9A%D0%BE%D0%B3%D0%B5%D1%80%D0%B5%D0%BD%D1%82%D0%BD%D0%BE%D1%81%D1%82%D1%8C_(%D0%BB%D0%B8%D0%BD%D0%B3%D0%B2%D0%B8%D1%81%D1%82%D0%B8%D0%BA%D0%B0)\">Когерентность (лингвистика)</a></strong>&nbsp;и&nbsp;<strong><a title=\"Когезия (лингвистика)\" href=\"https://ru.wikipedia.org/wiki/%D0%9A%D0%BE%D0%B3%D0%B5%D0%B7%D0%B8%D1%8F_(%D0%BB%D0%B8%D0%BD%D0%B3%D0%B2%D0%B8%D1%81%D1%82%D0%B8%D0%BA%D0%B0)\">Когезия (лингвистика)</a></strong></div>\n<p>В смысловой цельности текста отражаются те связи и зависимости, которые имеются в самой действительности (общественные события, явления&nbsp;<a title=\"Природа\" href=\"https://ru.wikipedia.org/wiki/%D0%9F%D1%80%D0%B8%D1%80%D0%BE%D0%B4%D0%B0\">природы</a>,&nbsp;<a title=\"Человек\" href=\"https://ru.wikipedia.org/wiki/%D0%A7%D0%B5%D0%BB%D0%BE%D0%B2%D0%B5%D0%BA\">человек</a>, его внешний облик и&nbsp;<a title=\"Внутренний мир\" href=\"https://ru.wikipedia.org/wiki/%D0%92%D0%BD%D1%83%D1%82%D1%80%D0%B5%D0%BD%D0%BD%D0%B8%D0%B9_%D0%BC%D0%B8%D1%80\">внутренний мир</a>, предметы неживой природы и&nbsp;т.&nbsp;д.).</p>\n<p>Единство предмета речи&nbsp;&mdash; это тема высказывания. Тема&nbsp;&mdash; это&nbsp;<em>смысловое ядро текста, конденсированное и обобщённое содержание текста</em>.</p>\n<p>Понятие &laquo;содержание высказывания&raquo; связано с категорией информативности речи и присуще только тексту. Оно сообщает читателю индивидуально-авторское понимание отношений между явлениями, их значимости во всех сферах придают ему смысловую цельность.</p>\n<p>В большом тексте ведущая тема распадается на ряд составляющих подтем; подтемы членятся на более дробные, на абзацы (микротемы).</p>\n<p>Завершённость высказывания связана со смысловой цельностью текста. Показателем законченности текста является возможность подобрать к нему&nbsp;<a class=\"mw-redirect\" title=\"Заголовок\" href=\"https://ru.wikipedia.org/wiki/%D0%97%D0%B0%D0%B3%D0%BE%D0%BB%D0%BE%D0%B2%D0%BE%D0%BA\">заголовок</a>, отражающий его содержание.</p>\n<p>Таким образом, из смысловой цельности текста вытекают следующие признаки текста:</p>\n<ul>\n<li>Текст&nbsp;&mdash; это высказывание на определённую тему;</li>\n<li>В тексте реализуется&nbsp;<a class=\"new\" title=\"Замысел (страница отсутствует)\" href=\"https://ru.wikipedia.org/w/index.php?title=%D0%97%D0%B0%D0%BC%D1%8B%D1%81%D0%B5%D0%BB&amp;action=edit&amp;redlink=1\">замысел</a>&nbsp;говорящего, основная мысль;</li>\n<li>Текст любого размера&nbsp;&mdash; это относительно автономное (законченное) высказывание;</li>\n<li>Предложения логически связаны между собой;</li>\n<li>К тексту можно подобрать&nbsp;<a class=\"mw-redirect\" title=\"Заголовок\" href=\"https://ru.wikipedia.org/wiki/%D0%97%D0%B0%D0%B3%D0%BE%D0%BB%D0%BE%D0%B2%D0%BE%D0%BA\">заголовок</a>;</li>\n<li>Правильно оформленный текст обычно имеет начало и конец.</li>\n</ul>",
       "announcement": "Древняя тайна, о которой молчат",
       "category": "short",
-      "views": 1352,
-      "likes": 266,
+      "views": 0,
+      "likes": 0,
       "date": "2023-09-11",
-      "image": "/uploads/13.jpg"
+      "image": "/uploads/1697527692378-1696860666554-9661273.jpg"
+    },
+    {
+      "id": 5,
+      "title": "ebsal",
+      "body": "Текст",
+      "announcement": "Анонс",
+      "category": "short",
+      "views": 0,
+      "likes": 0,
+      "date": "2023-10-15",
+      "image": "/uploads/1697532451021-3-image.jpg"
+    },
+    {
+      "title": "Россияне видят этого человека во сне",
+      "body": "<p>хаха</p>",
+      "announcement": "Кто снится россиянам уже 5 год...",
+      "category": "short",
+      "views": 0,
+      "likes": 0,
+      "date": "2023-10-16",
+      "image": "/uploads/1697442709855-4-image.jpg",
+      "id": 6
+    },
+    {
+      "id": 7,
+      "title": "31`31",
+      "body": "<p>32`3`13`1`1311`33`1</p>",
+      "announcement": "3`1`1313`1",
+      "category": "short",
+      "views": 0,
+      "likes": 0,
+      "date": "2023-10-17",
+      "image": "/uploads/1697532438685-6-image.jpg"
     }
   ],
-  "comments": [
-    {
-      "postId": 1,
-      "id": 1,
-      "userId": 1,
-      "body": "harum non quasi et ration tempore iure ex voluptates in rationeharum architecto fugit inventore cupiditatevoluptates magni quo et"
-    },
-    {
-      "postId": 1,
-      "id": 2,
-      "userId": 2,
-      "body": "harum non quasi et ration tempore iure ex voluptates in rationeharum architecto fugit inventore cupiditatevoluptates magni quo et"
-    },
-    {
-      "postId": 2,
-      "id": 3,
-      "userId": 5,
-      "body": "harum non quasi et ration tempore iure ex voluptates in rationeharum architecto fugit inventore cupiditatevoluptates magni quo et"
-    }
-  ]
+  "comments": []
 }

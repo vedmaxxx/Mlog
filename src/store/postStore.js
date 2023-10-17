@@ -49,6 +49,9 @@ class PostStore {
   setPosts(postlist) {
     this.postList = postlist;
   }
+  get posts() {
+    return this.postList;
+  }
 
   // Добавление/удаление постов
   addPost(post) {
@@ -56,6 +59,11 @@ class PostStore {
   }
   removePost(post_id) {
     this.postList = this.postList.filter((post) => post.id !== post_id);
+  }
+
+  getPost(post_id) {
+    const res = this.postList.find((post) => post.id == post_id);
+    return res;
   }
 }
 

@@ -1,32 +1,51 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Container, Form } from "react-bootstrap";
 import { Editor } from "@tinymce/tinymce-react";
 import { loggedInClient } from "../API";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { observer } from "mobx-react-lite";
 import { Context } from "../index";
 
 import classes from "./EditPostMenu.module.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../images/logo.jpg";
-import { createPost } from "../API/postAPI";
+import { createPost, getPost, updatePost } from "../API/postAPI";
 
-const EditPostMenu = observer(() => {
+const EditPostMenu = observer(({ mode }) => {
+  const { posts } = useContext(Context);
+  const { users } = useContext(Context);
+
   const [body, setBody] = useState("");
   const [title, setTitle] = useState("");
   const [announcement, setAnnouncement] = useState("");
   const [image, setImage] = useState("");
+  const [date, setDate] = useState("");
+  const [category, setCategory] = useState("");
+  const [userId, setUserId] = useState(Date.now());
+  const [likes, setLikes] = useState(0);
+  const [views, setViews] = useState(0);
+
   const navigate = useNavigate();
-  const { posts } = useContext(Context);
-  const { users } = useContext(Context);
+  const params = useParams();
 
   const handleEditorChange = (e) => {
     setBody(e.target.getContent());
   };
 
+  useEffect(() => {
+    if (mode == "edit") {
+      getCurrentPost(params.id);
+    }
+  }, []);
+
   const handlePostClick = (e) => {
     e.preventDefault();
-    createNewPost();
+    if (mode == "edit") {
+      updateCurrentPost();
+    }
+    if (mode == "create") {
+      createNewPost();
+    }
     navigate("/posts");
   };
 
@@ -37,10 +56,42 @@ const EditPostMenu = observer(() => {
     setImage(response.data.filename);
   };
 
+  const updateCurrentPost = async () => {
+    // PUT-запрос
+    const post = {
+      id: params.id,
+      userId: userId,
+      title: title || "Заголовок",
+      body: body || "Текст",
+      announcement: announcement || "Анонс",
+      category: category,
+      views: views,
+      likes: likes,
+      date: date,
+      image: image,
+    };
+
+    const response = await updatePost(params.id, post);
+    console.log(response);
+  };
+
+  // Получаем c сервера?(можно ли из стора?) данные о посте, который редактируем
+  const getCurrentPost = async (post_id) => {
+    const response = await getPost(post_id);
+    console.log(response.data);
+
+    setTitle(response.data.title);
+    setBody(response.data.body);
+    setAnnouncement(response.data.announcement);
+    setImage(response.data.image);
+    setDate(response.data.date);
+    setCategory(response.data.category);
+    setUserId(response.data.userId);
+  };
+
   const createNewPost = async () => {
     // добавить разделение лонгрид/шорт
     const newPost = {
-      // id: Date.now(),
       userId: users.user.id,
       title: title || "Заголовок",
       body: body || "Текст",
@@ -57,10 +108,19 @@ const EditPostMenu = observer(() => {
     posts.addPost(response.data);
   };
 
+  function getTitle() {
+    if (mode == "edit") {
+      return "Редактирование поста";
+    }
+    if (mode == "create") {
+      return "Создание нового поста";
+    }
+  }
+
   return (
     <Container className={classes.container}>
       <Form>
-        <div className={classes.title}>Новый пост</div>
+        <div className={classes.title}>{getTitle()}</div>
         <div className={classes.grid}>
           <div>Заголовок поста</div>
           <div>
@@ -104,9 +164,11 @@ const EditPostMenu = observer(() => {
                   "undo redo | bold italic | alignleft aligncenter alignright",
               }}
               onChange={handleEditorChange}
+              initialValue={body}
             />
           </div>
           <div></div>
+
           <button className={classes.post_btn} onClick={handlePostClick}>
             Опубликовать
           </button>

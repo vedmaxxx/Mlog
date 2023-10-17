@@ -48,7 +48,7 @@ const PostList = observer(() => {
         ))}
         <button
           className={classes.create_btn}
-          onClick={() => navigate("/edit")}
+          onClick={() => navigate("/create")}
         >
           Написать пост...
         </button>

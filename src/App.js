@@ -51,9 +51,11 @@ function App() {
             <Route path="/profile" element={<ProfilePage />} />
           )}
           {users.loggedIn && (
-            <Route path="/edit/:id" element={<EditPostPage />} />
+            <Route path="/edit/:id" element={<EditPostPage mode={"edit"} />} />
           )}
-          {users.loggedIn && <Route path="/edit" element={<EditPostPage />} />}
+          {users.loggedIn && (
+            <Route path="/create" element={<EditPostPage mode={"create"} />} />
+          )}
         </Routes>
       </BrowserRouter>
     </div>

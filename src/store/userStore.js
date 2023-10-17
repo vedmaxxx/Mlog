@@ -1,7 +1,7 @@
 import { makeAutoObservable } from "mobx";
 
 class UserStore {
-  users = [
+  userList = [
     {
       id: 1,
       role: "admin",
@@ -88,6 +88,18 @@ class UserStore {
   }
   setLoggedIn(loggedIn) {
     this._loggedIn = loggedIn;
+  }
+
+  getUserById(user_id) {
+    console.log("getUserById started");
+    console.log("user_id: ", user_id);
+    console.log(this.userList);
+    const res = this.userList.find((user) => user.id == user_id);
+
+    console.log(res);
+    console.log("getUserById ended");
+
+    return res;
   }
 
   get user() {
