@@ -88,6 +88,8 @@ const EditPostMenu = observer(({ mode }) => {
     setDate(response.data.date);
     setCategory(response.data.category);
     setUserId(response.data.userId);
+    setViews(response.data.views);
+    setLikes(response.data.likes);
   };
 
   const createNewPost = async () => {
@@ -99,8 +101,8 @@ const EditPostMenu = observer(({ mode }) => {
       body: body || "Текст",
       announcement: announcement || "Анонс",
       category: "short",
-      views: 0,
-      likes: 0,
+      views: views,
+      likes: likes,
       date: new Date().toISOString().slice(0, 10),
       image:
         image ||

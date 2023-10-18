@@ -22,19 +22,18 @@ const Post = observer(() => {
   const [image, setImage] = useState("");
   const [date, setDate] = useState("");
   const [category, setCategory] = useState("");
-  const [userId, setUserId] = useState(0);
   const [likes, setLikes] = useState(0);
   const [views, setViews] = useState(0);
 
   const [firstname, setFirstname] = useState("");
   const [lastname, setLastname] = useState("");
+  const [avatar, setAvatar] = useState("");
 
   useEffect(() => {
     getPosts().then((gotPosts) => {
       posts.setPosts(gotPosts.data);
 
       const foundPost = gotPosts.data.find((post) => post.id == params.id);
-
       setId(foundPost.id);
       setTitle(foundPost.title);
       setBody(foundPost.body);
@@ -42,12 +41,13 @@ const Post = observer(() => {
       setImage(foundPost.image);
       setDate(foundPost.date);
       setCategory(foundPost.category);
-      setUserId(foundPost.userId);
+      setViews(foundPost.views);
+      setLikes(foundPost.likes);
 
       const user = users.getUserById(foundPost?.userId);
-
       setFirstname(user.first_name);
       setLastname(user.last_name);
+      setAvatar(user.avatar);
     });
   }, []);
 
@@ -84,11 +84,7 @@ const Post = observer(() => {
         ></div>
         <div className={classes.footer}>
           <Link className={classes.avatar_container}>
-            <img
-              className={classes.avatar}
-              src="https://mykaleidoscope.ru/x/uploads/posts/2022-09/1663229788_10-mykaleidoscope-ru-p-zloi-pushistik-vkontakte-11.jpg"
-              alt=""
-            />
+            <img className={classes.avatar} src={avatar} alt="" />
           </Link>
           <div>
             <Link to="/" className={classes.author_info}></Link>

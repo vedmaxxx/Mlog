@@ -28,3 +28,18 @@
   box-shadow: 0 0 2px #c2c2c2;
   transition: 0.2s;
 }
+
+.sort {
+  margin: 30px 0;
+  display: flex;
+  align-items: center;
+}
+
+.sort_title {
+  font-size: 20px;
+  margin: 0 20px 0 0;
+}
+
+.sort_select {
+  width: 150px;
+}

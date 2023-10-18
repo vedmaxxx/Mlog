@@ -10,20 +10,14 @@ const NavBar = observer(() => {
   const { users } = useContext(Context);
   const navigate = useNavigate();
 
-  // const handleQuit = () => {
-  //   useEffect(() => {
-  //     users.setLoggedIn(false);
-
-  //   }, []);
-  // };
-
   return (
     <div>
       <Navbar bg="primary" data-bs-theme="dark">
         <Container>
           <Navbar.Brand href="#home" className="ms-5">
-            {/* <HandySvg src="" /> */}
-            LOGO
+            <Link className={classes.nav_link} to="/main">
+              <img src="../images/logo.jpg" alt="" />
+            </Link>
           </Navbar.Brand>
           <Nav className="me-auto ms-3">
             <Link className={classes.nav_link} to="/main">

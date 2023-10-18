@@ -52,7 +52,7 @@ const PostListItem = observer(
             <div className={classes.date}>{date}</div>
           </div>
         </div>
-        {users.loggedIn && (
+        {users.isCurrentUserAdmin() && (
           <button
             className={classes.delete_btn + " end-0"}
             onClick={() => {
@@ -62,7 +62,7 @@ const PostListItem = observer(
             Удалить
           </button>
         )}
-        {users.loggedIn && (
+        {users.isCurrentUserAdmin() && (
           <button
             className={classes.edit_btn + " start-0"}
             onClick={() => {

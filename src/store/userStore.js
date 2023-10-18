@@ -94,15 +94,14 @@ class UserStore {
   }
 
   getUserById(user_id) {
-    console.log("getUserById started");
-    console.log("user_id: ", user_id);
-    console.log(this.userList);
     const res = this.userList.find((user) => user.id == user_id);
-
-    console.log(res);
-    console.log("getUserById ended");
-
     return res;
+  }
+  isCurrentUserAdmin() {
+    if (this._user.role == "admin") {
+      return true;
+    }
+    return false;
   }
 
   get user() {
