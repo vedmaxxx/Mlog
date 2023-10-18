@@ -8,7 +8,6 @@ import { Context } from "../index";
 
 import classes from "./EditPostMenu.module.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "../images/logo.jpg";
 import { createPost, getPost, updatePost } from "../API/postAPI";
 
 const EditPostMenu = observer(({ mode }) => {
