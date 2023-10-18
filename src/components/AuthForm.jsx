@@ -21,6 +21,7 @@ const AuthForm = observer(() => {
       navigate("/posts");
       users.setLoggedIn(true);
       users.setUser(response.data);
+      console.log("Авторизован: ", users.loggedIn);
     } catch (error) {
       if (error.response.status == 301) {
         alert("Неверный логин или пароль");

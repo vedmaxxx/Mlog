@@ -63,6 +63,7 @@ class PostStore {
 
   getPost(post_id) {
     const res = this.postList.find((post) => post.id == post_id);
+    console.log("getPost в постсторе: ", res);
     return res;
   }
 }

@@ -26,50 +26,30 @@ const Post = observer(() => {
   const [likes, setLikes] = useState(0);
   const [views, setViews] = useState(0);
 
+  const [firstname, setFirstname] = useState("");
+  const [lastname, setLastname] = useState("");
+
   useEffect(() => {
-    getData();
+    getPosts().then((gotPosts) => {
+      posts.setPosts(gotPosts.data);
+
+      const foundPost = gotPosts.data.find((post) => post.id == params.id);
+
+      setId(foundPost.id);
+      setTitle(foundPost.title);
+      setBody(foundPost.body);
+      setAnnouncement(foundPost.announcement);
+      setImage(foundPost.image);
+      setDate(foundPost.date);
+      setCategory(foundPost.category);
+      setUserId(foundPost.userId);
+
+      const user = users.getUserById(foundPost?.userId);
+
+      setFirstname(user.first_name);
+      setLastname(user.last_name);
+    });
   }, []);
-
-  const getData = async () => {
-    getPostList(getCurrentPost, getUsers);
-  };
-
-  const getPostList = async (cb1, cb2) => {
-    try {
-      const response = await getPosts();
-      posts.setPosts(response.data);
-      await cb1();
-      console.log("userId: ", userId);
-      await cb2();
-    } catch (error) {
-      alert("Возникла ошибка при загрузке постов getPostList");
-    }
-  };
-
-  const getUsers = async () => {
-    console.log("getUsers() started ");
-
-    const response = users.getUserById(userId);
-    console.log(response);
-    console.log("getUsers() ended ");
-  };
-
-  const getCurrentPost = () => {
-    console.log("getCurrentPost() started ");
-    const response = posts.getPost(params.id);
-    console.log(response);
-
-    setId(response.id);
-    setTitle(response.title);
-    setBody(response.body);
-    setAnnouncement(response.announcement);
-    setImage(response.image);
-    setDate(response.date);
-    setCategory(response.category);
-    setUserId(response.userId);
-
-    console.log("getCurrentPost() ended ");
-  };
 
   return (
     <Container className="w-75">
@@ -112,6 +92,9 @@ const Post = observer(() => {
           </Link>
           <div>
             <Link to="/" className={classes.author_info}></Link>
+            <div>
+              {firstname} {lastname}
+            </div>
             <div className={classes.role}>Редактор</div>
           </div>
         </div>

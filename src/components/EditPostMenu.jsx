@@ -15,13 +15,15 @@ const EditPostMenu = observer(({ mode }) => {
   const { posts } = useContext(Context);
   const { users } = useContext(Context);
 
+  console.log("Текущий пользователь: ", users.user);
+
   const [body, setBody] = useState("");
   const [title, setTitle] = useState("");
   const [announcement, setAnnouncement] = useState("");
   const [image, setImage] = useState("");
   const [date, setDate] = useState("");
   const [category, setCategory] = useState("");
-  const [userId, setUserId] = useState(Date.now());
+  const [userId, setUserId] = useState(users.user.id);
   const [likes, setLikes] = useState(0);
   const [views, setViews] = useState(0);
 
@@ -78,7 +80,6 @@ const EditPostMenu = observer(({ mode }) => {
   // Получаем c сервера?(можно ли из стора?) данные о посте, который редактируем
   const getCurrentPost = async (post_id) => {
     const response = await getPost(post_id);
-    console.log(response.data);
 
     setTitle(response.data.title);
     setBody(response.data.body);
@@ -91,6 +92,7 @@ const EditPostMenu = observer(({ mode }) => {
 
   const createNewPost = async () => {
     // добавить разделение лонгрид/шорт
+    console.log("users.user.id, :", users.user.id);
     const newPost = {
       userId: users.user.id,
       title: title || "Заголовок",
@@ -104,8 +106,12 @@ const EditPostMenu = observer(({ mode }) => {
         image ||
         "https://cdnn21.img.ria.ru/images/151683/46/1516834602_0:161:3071:1888_1920x0_80_0_0_00f3d0ffc928e8b53c892093bbe5cac7.jpg",
     };
-    const response = await createPost(newPost);
-    posts.addPost(response.data);
+    try {
+      const response = await createPost(newPost);
+      posts.addPost(response.data);
+    } catch (error) {
+      alert("Не удалось добавить пользователя");
+    }
   };
 
   function getTitle() {

@@ -9,6 +9,7 @@ import { deletePost, getPosts } from "../API/postAPI";
 
 const PostList = observer(() => {
   const { posts } = useContext(Context);
+  const { users } = useContext(Context);
   const navigate = useNavigate();
 
   const removePost = async (post_id) => {
@@ -48,7 +49,13 @@ const PostList = observer(() => {
         ))}
         <button
           className={classes.create_btn}
-          onClick={() => navigate("/create")}
+          onClick={() => {
+            if (users.loggedIn) {
+              navigate("/create");
+            } else {
+              alert("Вы не авторизованы");
+            }
+          }}
         >
           Написать пост...
         </button>

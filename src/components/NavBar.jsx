@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { Button, Container, Nav, Navbar } from "react-bootstrap";
 import { Context } from "../index";
 import { observer } from "mobx-react-lite";
@@ -9,6 +9,13 @@ import { HandySvg } from "handy-svg";
 const NavBar = observer(() => {
   const { users } = useContext(Context);
   const navigate = useNavigate();
+
+  // const handleQuit = () => {
+  //   useEffect(() => {
+  //     users.setLoggedIn(false);
+
+  //   }, []);
+  // };
 
   return (
     <div>
@@ -38,6 +45,7 @@ const NavBar = observer(() => {
             className="me-5"
             onClick={() => {
               users.setLoggedIn(false);
+              users.clearUser();
             }}
           >
             Выйти

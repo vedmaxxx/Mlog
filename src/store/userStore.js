@@ -77,7 +77,7 @@ class UserStore {
   // Текущий пользователь
   _user = {};
   // Авторизован ли пользователь
-  _loggedIn = true;
+  _loggedIn = false;
 
   constructor() {
     makeAutoObservable(this);
@@ -88,6 +88,9 @@ class UserStore {
   }
   setLoggedIn(loggedIn) {
     this._loggedIn = loggedIn;
+  }
+  clearUser() {
+    this._user = {};
   }
 
   getUserById(user_id) {

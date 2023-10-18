@@ -12,8 +12,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Context } from "./index";
 import { useContext } from "react";
 import EditPostPage from "./pages/EditPostPage";
+import { observer } from "mobx-react-lite";
 
-function App() {
+const App = observer(() => {
   // TODO:
   // Сортировка постов по дате/лайкам/просмотрам
   // Панель создания поста / редактирования - как пользователь
@@ -47,6 +48,7 @@ function App() {
           <Route path="/auth" element={<AuthPage />} />
           <Route path="/registration" element={<RegistrationPage />} />
           <Route path="/about" element={<AboutPage />} />
+          {console.log(users.loggedIn)}
           {users.loggedIn && (
             <Route path="/profile" element={<ProfilePage />} />
           )}
@@ -60,6 +62,6 @@ function App() {
       </BrowserRouter>
     </div>
   );
-}
+});
 
 export default App;

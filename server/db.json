@@ -115,37 +115,16 @@
       "image": "/uploads/1697527692378-1696860666554-9661273.jpg"
     },
     {
-      "id": 5,
-      "title": "ebsal",
+      "userId": 1,
+      "title": "124241",
       "body": "Текст",
-      "announcement": "Анонс",
+      "announcement": "21421",
       "category": "short",
       "views": 0,
       "likes": 0,
-      "date": "2023-10-15",
-      "image": "/uploads/1697532451021-3-image.jpg"
-    },
-    {
-      "title": "Россияне видят этого человека во сне",
-      "body": "<p>хаха</p>",
-      "announcement": "Кто снится россиянам уже 5 год...",
-      "category": "short",
-      "views": 0,
-      "likes": 0,
-      "date": "2023-10-16",
-      "image": "/uploads/1697442709855-4-image.jpg",
-      "id": 6
-    },
-    {
-      "id": 7,
-      "title": "31`31",
-      "body": "<p>32`3`13`1`1311`33`1</p>",
-      "announcement": "3`1`1313`1",
-      "category": "short",
-      "views": 0,
-      "likes": 0,
-      "date": "2023-10-17",
-      "image": "/uploads/1697532438685-6-image.jpg"
+      "date": "2023-10-18",
+      "image": "https://cdnn21.img.ria.ru/images/151683/46/1516834602_0:161:3071:1888_1920x0_80_0_0_00f3d0ffc928e8b53c892093bbe5cac7.jpg",
+      "id": 5
     }
   ],
   "comments": []
