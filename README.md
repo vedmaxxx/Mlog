@@ -1,71 +1,24 @@
-# Getting Started with Create React App
+# Mlog - платформа для чтения и создания постов 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Mlog - сайт, где можно читать посты на тему программирования и, будучи администратором, создавать свои собственные посты.
 
-## Available Scripts
+## Стек
 
-In the project directory, you can run:
+  - React, HTML, CSS
+  - Стейт-менеджер MobX
+  - HTTP-клиент Axios для отправления запросов
+  - JSON-server в качестве серверной части
+  - Библиотека fontAwesome для работы с иконками и tinyMCE для использования готового редактора текста
 
-### `npm start`
+Запросы с клиентской части отправляются на сервер посредством HTTP-запросов - POST, PUT, DELETE, GET. Данные отправляются из моковой базы данных - файла db.json.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Дополнительно
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- REACT_APP_BASE_URL - локальная переменная с адресом, на котором располагается данное веб-приложение.
 
-### `npm test`
+### Запуск
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# Mlog
+- Склонируйте репозиторий
+- Введите npm i в терминале
+- Введите npm start для запуска клиентской части
+- В новом терминале введите npm run dev для запуска серверной части
